@@ -1,16 +1,22 @@
 <h1>Formularz:</h1>
 <div>
     <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
-        <label>Imię:</label><input name="firstname" formControlName="firstname"><br />
-        <span *ngIf="formErrors.firstname">{{ formErrors.firstname }}</span><br />
+        <label>Imię:</label><input name="firstname" formControlName="firstname">
+        <span *ngIf="formErrors.firstname">{{ formErrors.firstname }}</span><br/>
 
-        <label>Nazwisko:</label><input name="lastname" formControlName="lastname"><br />
-        <span *ngIf="formErrors.lastname">{{ formErrors.lastname }}</span><br />
+        <label>Nazwisko:</label><input name="lastname" formControlName="lastname">
+        <span *ngIf="formErrors.lastname">{{ formErrors.lastname }}</span><br/>
 
-        <label>Kod pocztowy:</label><input name="zip" formControlName="zip"><br />
-        <label>Email:</label><input name="email" formControlName="email"><br />
-        <label>Płeć:</label><input name="sex" formControlName="sex"><br />
+        <label>Kod pocztowy:</label><input name="zip" formControlName="zip">
+        <span *ngIf="formErrors.zip">{{ formErrors.zip }}</span><br/>
 
+        <label>Email:</label><input name="email" formControlName="email">
+        <span *ngIf="formErrors.email">{{ formErrors.email }}</span><br/>
+
+        <label class="clear">Kobieta</label><input type="radio" name="sex" formControlName="sex" value="kobieta" />
+        <label class="clear">Mężczyzna</label><input type="radio" name="sex" formControlName="sex" value="mężczyzna" /><br/>
+        <span *ngIf="formErrors.sex">{{ formErrors.sex }}</span><br/>
+        
         <button type="submit">Wyślij</button>
     </form>
 </div>

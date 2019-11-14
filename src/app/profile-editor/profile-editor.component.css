@@ -3,16 +3,18 @@ div{
 }
 
 input{
-    width: 100px;
+    width: 200px;
     height: 40px;
     background-color: #e4e4e4;
     border: solid 2px #a1a1a1;
+    margin-top: 5px;
 }
 
 label{
     color:#ffffff;
     font-size: 30px;
     display:inline-block;
+    margin-right: 5px;
 }
 
 button{
@@ -22,13 +24,19 @@ button{
     font-size: 20px;
     border: solid 2px #a1a1a1;
     background-color: #e4e4e4;
-    text-align:center
+    text-align:center;
+    margin-top: 5px;
 }
 
 span{
-    color:#ffffff;
+    color:#ff0000;
+    font-size: 20px;
 }
 
 h1{
     color:#ffffff;
+}
+
+#clear{
+    color: #ff0000;
 }

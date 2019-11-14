@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {debounceTime} from 'rxjs/internal/operators';
+import { debounceTime } from 'rxjs/internal/operators';
 
 @Component({
   selector: 'app-profile-editor',
@@ -35,16 +35,34 @@ export class ProfileEditorComponent implements OnInit {
 
   formErrors = {
     firstname: '',
-    lastname: ''
+    lastname: '',
+    zip: '',
+    email: '',
+    sex: '',
   }
 
   private validationMessages = {
     firstname: {
-      required: 'firstname is required'
+      required: 'Nie wprowadzono imienia!',
+      minlength: 'Wprowadzono za mało znaków! (minimum 2)',
+      maxlength:'Wprowadzono zbyt dużo znaków! (maximum 15)'
     },
     lastname: {
-      required: 'lastname is required',
-      minlength: 'lastname must have at least 2 characters'
+      required: 'Nie wprowadzono nazwiska!',
+      minlength: 'Wprowadzono zbyt mało znaków! (minimum 2)',
+      maxlength:'Wprowadzono zbyt dużo znaków! (maximum 25)'
+    },
+    zip: {
+      required: 'Nie wprowadzono kodu pocztowego!',
+      pattern: 'Wprowadzono zły format!'
+
+    },
+    email: {
+      required: 'Nie wprowadzono adresu email!',
+      pattern: 'Wprowadzono zły format!'
+    },
+    sex: {
+      required: 'Nie wprowadzono płci!'
     }
   }
 
