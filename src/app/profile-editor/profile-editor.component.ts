@@ -45,12 +45,12 @@ export class ProfileEditorComponent implements OnInit {
     firstname: {
       required: 'Nie wprowadzono imienia!',
       minlength: 'Wprowadzono za mało znaków! (minimum 2)',
-      maxlength:'Wprowadzono zbyt dużo znaków! (maximum 15)'
+      maxlength: 'Wprowadzono zbyt dużo znaków! (maximum 15)'
     },
     lastname: {
       required: 'Nie wprowadzono nazwiska!',
       minlength: 'Wprowadzono zbyt mało znaków! (minimum 2)',
-      maxlength:'Wprowadzono zbyt dużo znaków! (maximum 25)'
+      maxlength: 'Wprowadzono zbyt dużo znaków! (maximum 25)'
     },
     zip: {
       required: 'Nie wprowadzono kodu pocztowego!',
